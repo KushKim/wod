@@ -2,33 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Section
-{
-    naturalSciences,
-    liberalArts,
-    music,
-    art
-};
-
-
 public class PlayerManager
 {
-    int[] talent;
     int health;
-    int[] knowledge;
-    [SerializeField]
-    Sprite image;
+    int literature;
+    int mathematic;
+    int art;
+    int music;
+    int animator;
+    int chance;
 
     private static PlayerManager instance = null;
+
     private PlayerManager()
     {
-        health = 0;   
-        knowledge = new int[2];
-        knowledge[(int)Section.naturalSciences] = 0;
-        knowledge[(int)Section.liberalArts] = 0;
-        talent = new int[2];
-        talent[(int)Section.art] = 0;
-        talent[(int)Section.music] = 0;
+        health = 100;
+        literature = 0;
+        mathematic = 0;
+        art = 0;
+        music = 0;
+        animator = 0;
+        chance = 2;
     }
 
     public static PlayerManager getInstance()
@@ -44,23 +38,39 @@ public class PlayerManager
         set { health = value; }
     }
 
-    public void setKnowledge(int index,int val)
+    public int Literature
     {
-        knowledge[index] = val;
+        get { return literature; }
+        set { literature = value; }
     }
 
-    public int getKnowledge(int index)
+    public int Mathematic
     {
-        return knowledge[index];
+        get { return mathematic; }
+        set { mathematic = value; }
     }
 
-    public int getTalent(int index)
+    public int Art
     {
-        return talent[index];
+        get { return art; }
+        set { art = value; }
     }
 
-    public void setTalent(int index, int val)
+    public int Music
     {
-        talent[index] = val;
+        get { return music; }
+        set { music = value; }
+    }
+
+    public int Animator
+    {
+        get { return animator; }
+        set { animator = value; }
+    }
+
+    public int ChoiceChance
+    {
+        get { return chance; }
+        set { chance = value; }
     }
 }

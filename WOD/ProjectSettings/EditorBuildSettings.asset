@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainGameScreen(1).unity
     guid: 6d9a09d48b6a31e4a97db668a726004b
   - enabled: 1
+    path: Assets/Scenes/MainGameScreen(2).unity
+    guid: 24ad02e9453a4d34689127e0e4f38fa0
+  - enabled: 1
     path: Assets/Scenes/MoveTest.unity
     guid: ad997c90c46b0c746b4f7f5faff1fb53
   m_configObjects: {}

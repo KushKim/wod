@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacteristicStatus : MonoBehaviour
 {
-    
+
     /*public enum knowledgeKind
     {
         literature,
@@ -18,11 +18,11 @@ public class CharacteristicStatus : MonoBehaviour
         exercise
     }*/
 
-    public HealthUp orgMeHealth;
-    public TalentUp orgMeTalentArt;
-    public TalentUp orgMeTalentMusic;
-    public KnowlegeUp orgMeKnowlegeLiter;
-    public KnowlegeUp orgMeKnowlegeMath;
+    public StatusUp orgMeHealth;
+    public StatusUp orgMeTalentArt;
+    public StatusUp orgMeTalentMusic;
+    public StatusUp orgMeKnowlegeLiter;
+    public StatusUp orgMeKnowlegeMath;
 
     public int health;
     public int literature;
@@ -43,7 +43,7 @@ public class CharacteristicStatus : MonoBehaviour
         mathematic = 0;
         art = 0;
         music = 0;
-        exercise = 0;
+        Debug.Log(health);
     }
 
     void Update()

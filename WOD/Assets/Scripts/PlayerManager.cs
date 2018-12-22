@@ -13,6 +13,8 @@ public class PlayerManager
     int talent;
     int health;
     int[] knowledge;
+    [SerializeField]
+    Sprite image;
 
     private static PlayerManager instance = null;
     private PlayerManager()

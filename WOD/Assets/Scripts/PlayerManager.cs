@@ -5,12 +5,15 @@ using UnityEngine;
 enum Section
 {
     naturalSciences,
-    liberalArts
+    liberalArts,
+    music,
+    art
 };
+
 
 public class PlayerManager
 {
-    int talent;
+    int[] talent;
     int health;
     int[] knowledge;
     [SerializeField]
@@ -19,11 +22,13 @@ public class PlayerManager
     private static PlayerManager instance = null;
     private PlayerManager()
     {
-        talent = 0;
-        health = 0;
+        health = 0;   
         knowledge = new int[2];
         knowledge[(int)Section.naturalSciences] = 0;
         knowledge[(int)Section.liberalArts] = 0;
+        talent = new int[2];
+        talent[(int)Section.art] = 0;
+        talent[(int)Section.music] = 0;
     }
 
     public static PlayerManager getInstance()
@@ -31,12 +36,6 @@ public class PlayerManager
         if (instance == null)
             instance = new PlayerManager();
         return instance;
-    }
-
-    public int Talent
-    {
-        get { return talent; }
-        set { talent = value; }
     }
 
     public int Health
@@ -53,5 +52,15 @@ public class PlayerManager
     public int getKnowledge(int index)
     {
         return knowledge[index];
+    }
+
+    public int getTalent(int index)
+    {
+        return talent[index];
+    }
+
+    public void setTalent(int index, int val)
+    {
+        talent[index] = val;
     }
 }
